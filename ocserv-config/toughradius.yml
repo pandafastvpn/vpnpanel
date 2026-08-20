@@ -1,0 +1,31 @@
+# ToughRadius 配置文件
+# toughradius.prod.yml
+#
+# 放在 ToughRadius 安装目录下, 与本系统集成
+
+system:
+  appid: ToughRADIUS
+  location: Asia/Shanghai
+  workdir: ./rundata
+
+database:
+  type: sqlite
+  name: toughradius.db
+  # 如果使用PostgreSQL:
+  # type: postgres
+  # host: localhost
+  # port: 5432
+  # user: toughradius
+  # passwd: your_password
+
+radiusd:
+  enabled: true
+  host: 0.0.0.0
+  auth_port: 1812    # RADIUS 认证端口
+  acct_port: 1813   # RADIUS 计费端口
+  radsec_port: 2083 # RadSec 端口
+
+web:
+  host: 0.0.0.0
+  port: 1816        # Web管理界面端口
+  secret: "CHANGE_THIS_TO_A_LONG_RANDOM_STRING"  # JWT签名密钥, 生产环境必须修改
