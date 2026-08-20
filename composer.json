@@ -1,0 +1,14 @@
+{
+    "name": "ocserv/vpn-sales",
+    "description": "VPN销售系统 - 基于NETORA-Radius和ocserv的VPN账户销售管理平台",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
