@@ -1,0 +1,9 @@
+# 宝塔面板 Nginx 伪静态规则
+# 或者使用 .htaccess (Apache)
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
