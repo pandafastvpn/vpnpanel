@@ -1,0 +1,2 @@
+This directory is for storage (logs, uploads, etc.)
+Create this directory and ensure it is writable by the web server.
